@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk - Chamado de Suporte</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>TicDesk - Chamado de Suporte</h1>
+    </header>
+
+    <main>
+        <div class="top-section">
+            <section class="ticket-form">
+                <h2>Abrir um Novo Chamado</h2>
+                <form id="ticketForm">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="anydesk">AnyDesk:</label>
+                    <input type="number" id="anydesk" name="anydesk" required pattern="[0-9]*">
+
+                    <label for="description">Descrição:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+
+                    <label for="responsible">Responsável:</label>
+                    <input type="text" id="responsible" name="responsible" required>
+
+                    <div class="checkbox-section">
+                        <label for="isBox">É Caixa?</label>
+                        <input type="checkbox" id="isBox" name="isBox">
+
+                        <div id="boxNumberContainer" style="display: none;">
+                            <label for="boxNumber">Número da Caixa:</label>
+                            <input type="number" id="boxNumber" name="boxNumber">
+                        </div>
+                    </div>
+
+                    <button type="submit">Enviar Chamado</button>
+                </form>
+            </section>
+
+            <section class="ticket-list">
+                <h2>Meus Chamados</h2>
+                <ul id="ticketsList">
+                    <!-- Aqui serão listados os chamados -->
+                </ul>
+            </section>
+        </div>
+
+        <section class="ticket-history">
+            <h2>Histórico de Chamados</h2>
+            <ul id="ticketsHistory">
+                <!-- Aqui será o histórico de chamados -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
